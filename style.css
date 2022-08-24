@@ -21,7 +21,7 @@ body {
     
 }
 input[type=text] {
-    width: 100%;
+    width: 10%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -34,8 +34,7 @@ input[type=text] {
   input[type=text]:focus {
     border: 3px solid #555;
   }
-  
-/*Card*/
+
 .card{
     width: 90%;
     max-width: 350px;
@@ -91,8 +90,26 @@ input[type=text] {
     font-size: 2rem;
     height: 80px;
 }
-.precioCard{
+.ageCard{
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 0.75rem;
+}
+form {
+    background-color: rgba(23, 66, 66, 0.466);
+}
+input {
+    margin: 0 10px;
+}
+
+button#saveCompetitor {
+    margin: 20px;
+}
+.numberCompetitor {
+    color: blue;
+    align-content: center;
+}
+
+form label {
+    color: blue;
 }
