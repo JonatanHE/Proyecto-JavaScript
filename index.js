@@ -64,6 +64,13 @@ function saveCompetitor(){
     llave.push(createdCompetitor)
     //Se vacian los inputs al guardar competidor
     form.reset()
+    Swal.fire({
+        position: 'start',
+        icon: 'success',
+        title: `Has agregado a ${createdCompetitor.name} como nuevo participante`,
+        showConfirmButton: false,
+        timer: 2000
+      })
 }
 
 //Se guarda competidor
