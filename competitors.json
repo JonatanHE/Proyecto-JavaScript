@@ -1,0 +1,36 @@
+[
+    {
+        "id": 1,
+        "name": "Crhistian",
+        "surname": "Perez",
+        "age": 39,
+        "sex": "Masculino",
+        "image": "assets/man.jpg" 
+    },
+    {
+        "id": 2,
+        "name": "Mariela",
+        "surname": "Pazos",
+        "age": 44,
+        "sex": "Femenino",
+        "image": "assets/woman.jpg" 
+    },
+    {
+        "id": 3,
+        "name": "Cristina",
+        "surname": "Lopez",
+        "age": 42,
+        "sex": "Masculino",
+        "image": "assets/woman.jpg" 
+    },
+    {
+        "id": 4,
+        "name": "Ariel",
+        "surname": "Zalazar",
+        "age": 42,
+        "sex": "Masculino",
+        "image": "assets/man.jpg" 
+    }]
+
+
+

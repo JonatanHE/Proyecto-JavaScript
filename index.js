@@ -12,14 +12,24 @@ class Competitors {
 }
 //Instanciación de objetos -- respetamos orden y cantidad de atributos
 
-const competitor1 = new Competitors(1,"Nombre1", "Apellido1", 20, "Femenino", "assets/woman.jpg")
+//const competitor1 = new Competitors(1,"Nombre1", "Apellido1", 20, "Femenino", "assets/woman.jpg")
 // const competitor2 = new Competitors(2,"Nombre2", "Apellido2", 19, "Femenino", "assets/woman.jpg")
 // const competitor3 = new Competitors(3,"Nombre3", "Apellido3", 21, "Masculino", "assets/man.jpg")
 // const competitor4 = new Competitors(4,"Nombre4", "Apellido4", 20, "Masculino", "assets/man.jpg")
 
 //Cargar array 
-const llave = [competitor1]
+//const llave = [competitor1]
 
+let llave = []
+fetch("competitors.json")
+.then(resp => resp.json())
+.then(data =>{
+    console.log(data)
+    for(let competitor of data){
+        let newCompetitor = new Competitors(competitor.id, competitor.name, competitor.surname, competitor.age, competitor.sex, competitor.image)
+        llave.push(newCompetitor)
+    }
+})
 
 //Plantillas
 
@@ -77,17 +87,17 @@ function saveCompetitor(){
 const saveCompetitorBtn = document.getElementById("saveCompetitorBtn")
 saveCompetitorBtn.addEventListener("click", saveCompetitor)
 
-localStorage.setItem("competidores", competitor1)
+//localStorage.setItem("competidores", competitor1)
 localStorage.setItem("llave", llave)
 
-let competitor1JSON = JSON.stringify(competitor1)
+//let competitor1JSON = JSON.stringify(competitor1)
 // console.log(competitor1JSON)
-localStorage.setItem("productoJSON", competitor1JSON)
+//localStorage.setItem("productoJSON", competitor1JSON)
 let arrayJSON = JSON.stringify(llave)
 localStorage.setItem("arrayJSON", arrayJSON)
 
 let capturaCompetitor1 = localStorage.getItem("productoJSON")
-console.log(competitor1)
+//console.log(competitor1)
 console.log(capturaCompetitor1)
 let competitor1parseado = JSON.parse(capturaCompetitor1)
 console.log (competitor1parseado)
